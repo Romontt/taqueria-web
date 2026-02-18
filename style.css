@@ -3,16 +3,16 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFF8F0;
-    color: #333333;
+    background-color: #000000; /* negro sólido del logo */
+    color: #FFFFFF;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #E63946, #F77F00);
-    padding: 1.5rem 1rem;
-    color: white;
+    background-color: #000000; /* negro sólido */
+    padding: 2rem 1rem;
     text-align: center;
+    position: relative;
 }
 
 .header-container {
@@ -24,33 +24,59 @@ header {
 }
 
 .logo {
-    width: 120px;
+    width: 150px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-header h1 {
+/* Tipografía del logo */
+.taqueria {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
     margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
 }
 
-header p {
-    margin: 0.3rem 0 0;
-    font-size: 1.2rem;
-    font-style: italic;
+.torres {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin: 0.2rem 0;
+    position: relative;
+}
+
+/* Acentos rojos a los lados de "TORRES" */
+.torres::before,
+.torres::after {
+    content: "—";
+    color: #E63946;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+.fast-food {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    background-color: #5C3A21; /* marrón madera */
+    padding: 0.2rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 0.3rem;
 }
 
 /* MENÚ */
 #menu {
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
+    background-color: #111111; /* ligeramente más claro que el fondo general */
 }
 
 #menu h2 {
     font-size: 2rem;
-    color: #E63946;
+    color: #FFD700; /* amarillo del logo */
     margin-bottom: 1rem;
 }
 
@@ -64,23 +90,29 @@ header p {
 }
 
 #menu li {
-    background-color: #FFFFFF;
+    background-color: #1C1C1C;
     border-radius: 8px;
     padding: 1rem 1.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
     font-size: 1.1rem;
-    width: 200px;
+    width: 220px;
+    transition: 0.3s ease;
+}
+
+#menu li:hover {
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.6);
+    transform: translateY(-3px);
 }
 
 /* GALERÍA */
 #galeria {
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
 }
 
 #galeria h2 {
     font-size: 2rem;
-    color: #E63946;
+    color: #FFD700;
     margin-bottom: 1rem;
 }
 
@@ -94,7 +126,12 @@ header p {
 .fotos img {
     width: 260px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.fotos img:hover {
+    transform: scale(1.05);
 }
 
 /* BOTÓN WHATSAPP */
@@ -125,9 +162,10 @@ header p {
 
 /* FOOTER */
 footer {
-    background-color: #333333;
+    background-color: #111111;
     color: white;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
 }
+
