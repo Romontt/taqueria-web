@@ -10,51 +10,66 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- ===== ESTILOS HAMBURGUESA ===== -->
-    <style>
-    /* ===== HAMBURGUESA ===== */
-    .navbar .hamburger {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 5px;
-        margin-left: 10px;
-    }
-    .navbar .hamburger span {
-        width: 25px;
-        height: 3px;
-        background: #fff;
-        border-radius: 2px;
-        transition: 0.3s;
-    }
-    .navbar .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px,5px);
-    }
-    .navbar .hamburger.active span:nth-child(2) { opacity: 0; }
-    .navbar .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px,-5px);
-    }
+   <style>
+/* ===== CARRITO FLOAT ===== */
+#carrito {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 250px;
+    background: #fff;
+    border: 2px solid #ff9800;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+#cart-items div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+#cart-items button {
+    background: #e53935;
+    border: none;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#checkout-btn {
+    width: 100%;
+    padding: 8px;
+    background: #ff9800;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#checkout-btn:hover { background: #fb8c00; }
 
-    /* RESPONSIVE MOVIL */
-    @media(max-width:768px){
-        .nav-links {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 200px;
-            height: 100%;
-            background: #ff9800;
-            flex-direction: column;
-            gap: 20px;
-            padding-top: 60px;
-            transition: 0.3s;
-            z-index: 1000;
-        }
-        .nav-links.mobile-active { right: 0; }
-        .nav-links li a { color: #fff; font-weight: 600; }
-        .nav-btn { display: none; }
-        .navbar .hamburger { display: flex; }
+/* ===== BOTONES AGREGAR AL CARRITO ===== */
+.add-to-cart {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.add-to-cart:hover { background: #fb8c00; color: #fff; }
+
+/* ===== MENÚ MÓVIL ===== */
+@media(max-width:768px){
+    .nav-links {
+        background: rgba(0,0,0,0.9); /* fondo oscuro semitransparente */
     }
-    </style>
+    .nav-links li a { color: #fff; font-weight: 600; }
+}
+</style>
 </head>
 
 <body>
