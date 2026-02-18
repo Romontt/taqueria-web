@@ -50,15 +50,36 @@ header {
 /* ========================= */
 
 #menu {
-    padding: 60px 20px;
+    padding: 100px 20px 60px 20px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.85)
+    ),
+    radial-gradient(circle at top left, #5a3b22 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #3a2418 0%, transparent 40%),
+    linear-gradient(145deg, #1a1a1a, #2b1f15);
 }
 
 #menu h2 {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    letter-spacing: 2px;
+    font-size: 42px;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
     color: #FFD700;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#menu h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 15px auto 0;
+    background: linear-gradient(to right, #FFD700, #b8860b);
+    border-radius: 5px;
 }
 
 /* ========================= */
