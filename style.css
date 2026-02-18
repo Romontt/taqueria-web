@@ -11,13 +11,15 @@ body {
 header {
     background-color: #000000; /* fondo negro */
     padding: 2rem 2rem;
-    text-align: left;
+    text-align: center; /* todo dentro del header centrado */
 }
 
 .header-container {
     display: flex;
-    align-items: center;
-    gap: 2rem; /* espacio entre logo y texto */
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    gap: 1.5rem;
+    flex-wrap: wrap; /* en móviles baja debajo del logo si falta espacio */
 }
 
 .logo {
@@ -27,57 +29,42 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* Texto al lado del logo */
 .header-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center; /* asegura que el texto quede centrado */
+}
+
+/* Texto en blanco */
+.taqueria,
+.torres,
+.fast-food {
+    color: #FFFFFF; /* todas las letras en blanco */
 }
 
 /* TAQUERÍA */
 .taqueria {
-    font-family: 'Oswald', sans-serif; /* sans-serif limpia y condensada */
+    font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
-    color: #FFD700; /* amarillo */
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0;
-    letter-spacing: 2px;
 }
 
 /* TORRES - estilo chalk / rústico */
 .torres {
-    font-family: 'Special Elite', cursive; /* efecto chalkboard / tiza */
+    font-family: 'Special Elite', cursive;
     font-size: 3rem;
-    color: #FFFFFF; /* blanco sobre fondo negro */
     margin: 0.2rem 0;
     position: relative;
-    text-shadow: 1px 1px 0 #FFD700, -1px -1px 0 #FFD700; /* ligero efecto rústico / iluminado */
 }
 
-/* Guiones rojos a los lados de TORRES */
-.torres::before,
-.torres::after {
-    content: "—";
-    color: #E63946; /* rojo */
-    font-weight: bold;
-    font-size: 2rem;
-    margin: 0 0.5rem;
-}
-
-/* FAST FOOD - sans-serif condensada y robusta */
+/* FAST FOOD */
 .fast-food {
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 700;
     font-size: 1rem;
-    color: #FFD700; /* dorado */
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0.3rem;
-    background-color: #5C3A21; /* marrón banner */
-    padding: 0.2rem 0.8rem;
-    border-radius: 5px;
-    display: inline-block;
 }
 /* MENÚ */
 #menu {
