@@ -418,49 +418,4 @@ footer {
     .horario-container p {
         font-size: 18px;
     }
-    /* ========================= */
-/* HAMBURGUESA + CARRITO MÓVIL */
-.hamburger-cart-wrapper {
-    display: none; /* solo se mostrará en móvil */
-    align-items: center;
-    gap: 10px;
-}
-
-/* Icono del carrito */
-.nav-cart {
-    font-size: 24px;
-    color: #fff;
-    text-decoration: none;
-}
-.nav-cart:hover {
-    text-shadow: 0 0 5px #000;
-}
-
-/* RESPONSIVE MOVIL */
-@media(max-width:768px){
-    .hamburger-cart-wrapper {
-        display: flex;
-        order: 1; /* que quede a la derecha */
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 200px;
-        height: 100%;
-        background: #ff9800;
-        flex-direction: column;
-        gap: 20px;
-        padding-top: 60px;
-        transition: 0.3s;
-        z-index: 1000;
-    }
-
-    .nav-links.mobile-active { right: 0; }
-
-    .nav-links li a { color: #fff; font-weight: 600; }
-    .nav-btn { display: none; }
-
-    .hamburger { cursor: pointer; }
 }
