@@ -52,11 +52,10 @@ header {
 
 /* TORRES — estilo retro decorativo parecido a Aviation Cocktail */
 .torres {
-    font-family: 'Rouge Script', cursive; /* script decorativo más clásico */
+    font-family: 'Fredericka the Great', cursive; /* estilo rústico y vintage */
     font-size: 3rem;
-    color: #FFFFFF; /* blanco para contraste con fondo negro */
+    color: #FFFFFF;
     margin: 0.2rem 0;
-    letter-spacing: 1px;
 }
 
 /* FAST FOOD */
