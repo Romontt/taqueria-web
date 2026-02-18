@@ -62,7 +62,7 @@ header {
 }
 
 /* ========================= */
-/* ACORDEÓN PREMIUM MEJORADO */
+/* ACORDEÓN PREMIUM CORREGIDO */
 /* ========================= */
 
 .accordion-item {
@@ -81,17 +81,24 @@ header {
     border-color: rgba(255, 215, 0, 0.6);
 }
 
-/* HEADER DEL ACORDEÓN */
+/* ========================= */
+/* BOTÓN HEADER (FIX BLANCO) */
+/* ========================= */
 
 .accordion-header {
     width: 100%;
-    background: linear-gradient(145deg, #2a1a12, #1f140e);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: linear-gradient(145deg, #2a1a12, #1f140e) !important;
+    background-color: #2a1a12 !important;
     color: #FFD700;
     padding: 22px 25px;
     font-size: 22px;
     font-weight: 600;
-    border: none;
-    outline: none;
     text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -100,9 +107,17 @@ header {
     border-radius: 0;
 }
 
-/* Elimina estilo blanco por defecto del botón */
-.accordion-header:focus {
-    outline: none;
+/* Quitar borde interno Firefox */
+.accordion-header::-moz-focus-inner {
+    border: 0;
+}
+
+/* Quitar estados activos blancos */
+.accordion-header:focus,
+.accordion-header:active {
+    outline: none !important;
+    box-shadow: none !important;
+    background: linear-gradient(145deg, #2a1a12, #1f140e) !important;
 }
 
 /* Línea dorada lateral */
@@ -135,11 +150,13 @@ header {
 
 /* Hover elegante */
 .accordion-header:hover {
-    background: linear-gradient(145deg, #3a2418, #24160f);
+    background: linear-gradient(145deg, #3a2418, #24160f) !important;
     padding-left: 30px;
 }
 
+/* ========================= */
 /* CONTENIDO */
+/* ========================= */
 
 .accordion-content {
     max-height: 0;
