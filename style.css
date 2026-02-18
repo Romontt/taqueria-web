@@ -9,24 +9,25 @@ body {
 
 /* HEADER */
 header {
-    background-color: #000000; /* negro sólido */
+    background-color: #000000; /* fondo negro */
     padding: 2rem 2rem;
+    text-align: left;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; /* espacio entre logo y texto */
 }
 
 .logo {
     width: 130px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* Texto a la par del logo */
+/* Texto al lado del logo */
 .header-text {
     display: flex;
     flex-direction: column;
@@ -35,32 +36,48 @@ header {
 
 /* TAQUERÍA */
 .taqueria {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif; /* sans-serif limpia y condensada */
     font-weight: 700;
     font-size: 1.2rem;
-    color: #FFD700; /* dorado */
-    letter-spacing: 2px;
+    color: #FFD700; /* amarillo */
     text-transform: uppercase;
     margin: 0;
+    letter-spacing: 2px;
 }
 
-/* TORRES - script estilo vintage / taquería */
+/* TORRES - estilo chalk / rústico */
 .torres {
-    font-family: 'Great Vibes', cursive; /* script elegante con swashes */
+    font-family: 'Special Elite', cursive; /* efecto chalkboard / tiza */
     font-size: 3rem;
-    color: #FFD700;
+    color: #FFFFFF; /* blanco sobre fondo negro */
     margin: 0.2rem 0;
     position: relative;
+    text-shadow: 1px 1px 0 #FFD700, -1px -1px 0 #FFD700; /* ligero efecto rústico / iluminado */
 }
 
-/* FAST FOOD - slab bold condensada */
+/* Guiones rojos a los lados de TORRES */
+.torres::before,
+.torres::after {
+    content: "—";
+    color: #E63946; /* rojo */
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+/* FAST FOOD - sans-serif condensada y robusta */
 .fast-food {
     font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700;
     font-size: 1rem;
-    color: #FFD700;
+    color: #FFD700; /* dorado */
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0.3rem;
+    background-color: #5C3A21; /* marrón banner */
+    padding: 0.2rem 0.8rem;
+    border-radius: 5px;
+    display: inline-block;
 }
 /* MENÚ */
 #menu {
