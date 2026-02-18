@@ -419,54 +419,48 @@ footer {
         font-size: 18px;
     }
     /* ========================= */
-/* NAVBAR HAMBURGUESA MOBILE */
-/* ========================= */
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+/* HAMBURGUESA + CARRITO MÓVIL */
+.hamburger-cart-wrapper {
+    display: none; /* solo se mostrará en móvil */
+    align-items: center;
+    gap: 10px;
 }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #FFD700;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+/* Icono del carrito */
+.nav-cart {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-cart:hover {
+    text-shadow: 0 0 5px #000;
 }
 
-.nav-links.mobile-active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* ajusta según navbar */
-    right: 20px;
-    background: rgba(0,0,0,0.95);
-    border-radius: 10px;
-    padding: 20px;
-    gap: 15px;
-    z-index: 999;
-}
-
-/* Móvil */
-@media (max-width: 768px) {
+/* RESPONSIVE MOVIL */
+@media(max-width:768px){
+    .hamburger-cart-wrapper {
+        display: flex;
+        order: 1; /* que quede a la derecha */
+    }
 
     .nav-links {
-        display: none;
-        gap: 0;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: 100%;
+        background: #ff9800;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 60px;
+        transition: 0.3s;
+        z-index: 1000;
     }
 
-    .hamburger {
-        display: flex;
-    }
+    .nav-links.mobile-active { right: 0; }
 
-    /* Mantener el carrito visible */
-    .nav-links li:last-child {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-    }
+    .nav-links li a { color: #fff; font-weight: 600; }
+    .nav-btn { display: none; }
+
+    .hamburger { cursor: pointer; }
 }
