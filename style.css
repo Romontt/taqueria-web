@@ -1,41 +1,87 @@
+/* GENERAL */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff8f0;
-    color: #333;
+    background-color: #FFF8F0;
+    color: #333333;
 }
 
+/* HEADER */
 header {
-    background-color: #e63946;
+    background: linear-gradient(135deg, #E63946, #F77F00);
+    padding: 1.5rem 1rem;
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 
 header p {
-    margin: 0.5rem 0 0;
+    margin: 0.3rem 0 0;
     font-size: 1.2rem;
+    font-style: italic;
 }
 
-section {
-    padding: 2rem 1rem;
+/* MENÚ */
+#menu {
     text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+#menu h2 {
+    font-size: 2rem;
+    color: #E63946;
+    margin-bottom: 1rem;
 }
 
 #menu ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 #menu li {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    width: 200px;
+}
+
+/* GALERÍA */
+#galeria {
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+#galeria h2 {
+    font-size: 2rem;
+    color: #E63946;
+    margin-bottom: 1rem;
 }
 
 .fotos {
@@ -46,28 +92,42 @@ section {
 }
 
 .fotos img {
-    width: 200px;
+    width: 260px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+/* BOTÓN WHATSAPP */
 .btn-whatsapp {
     display: inline-block;
-    background-color: #25d366;
+    background-color: #25D366;
     color: white;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     margin: 1rem 0;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.2s ease-in-out;
 }
 
+.btn-whatsapp:hover {
+    background-color: #1DA851;
+}
+
+/* MAPA */
 .mapa iframe {
     border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    margin-top: 1rem;
 }
 
+/* FOOTER */
 footer {
-    background-color: #333;
+    background-color: #333333;
     color: white;
     text-align: center;
     padding: 1rem;
+    font-size: 0.9rem;
 }
