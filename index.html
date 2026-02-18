@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- ===== ESTILOS HAMBURGUESA ===== -->
+    <!-- ===== ESTILOS HAMBURGUESA + CARRITO FLOTANTE ===== -->
     <style>
     /* ===== HAMBURGUESA ===== */
     .navbar .hamburger {
@@ -34,6 +34,78 @@
         transform: rotate(-45deg) translate(5px,-5px);
     }
 
+    /* ===== CARRITO FLOTANTE ===== */
+    #cart-button {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        background: #ff9800;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1001;
+        font-size: 24px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    #cart-panel {
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 350px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -4px 0 6px rgba(0,0,0,0.2);
+        padding: 20px;
+        box-sizing: border-box;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    #cart-panel.open { right: 0; }
+
+    #cart-panel h2 {
+        margin-top: 0;
+        font-family: 'Oswald', sans-serif;
+        color: #ff9800;
+    }
+
+    #cart-items div {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #cart-items button {
+        background: none;
+        border: none;
+        color: red;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #cart-total {
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #checkout-btn {
+        width: 100%;
+        padding: 10px;
+        background: #ff9800;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
     /* RESPONSIVE MOVIL */
     @media(max-width:768px){
         .nav-links {
@@ -53,6 +125,8 @@
         .nav-links li a { color: #fff; font-weight: 600; }
         .nav-btn { display: none; }
         .navbar .hamburger { display: flex; }
+
+        #cart-panel { width: 80%; }
     }
     </style>
 </head>
@@ -70,7 +144,6 @@
             <li><a href="#horario">Horario</a></li>
             <li><a href="#contacto">Contacto</a></li>
             <li><a href="https://www.instagram.com/taqueria.torres.guapiles/" target="_blank">Instagram</a></li>
-            <li><a href="#carrito">🛒</a></li>
         </ul>
 
         <a href="https://wa.me/50688543437" class="nav-btn" target="_blank">
@@ -101,7 +174,8 @@
         <button class="accordion-header">Combos</button>
         <div class="accordion-content">
             <div class="menu-grid">
-                <div class="menu-card"><h3>Combo #1</h3><p>Hamburguesa especial, papas fritas y refresco 250ml</p><div class="price">₡3.500</div><button class="add-to-cart" data-name="Combo #1" data-price="3500">Agregar al carrito</button></div>
+                <!-- Tu menú completo aquí (combos #1 a #14) -->
+               <div class="menu-card"><h3>Combo #1</h3><p>Hamburguesa especial, papas fritas y refresco 250ml</p><div class="price">₡3.500</div><button class="add-to-cart" data-name="Combo #1" data-price="3500">Agregar al carrito</button></div>
                 <div class="menu-card"><h3>Combo #2</h3><p>Hamburguesa tradicional, papas fritas y refresco 250ml</p><div class="price">₡3.000</div><button class="add-to-cart" data-name="Combo #2" data-price="3000">Agregar al carrito</button></div>
                 <div class="menu-card"><h3>Combo #3</h3><p>Hamburguesa crunchy, papas fritas y refresco 600ml</p><div class="price">₡4.500</div><button class="add-to-cart" data-name="Combo #3" data-price="4500">Agregar al carrito</button></div>
                 <div class="menu-card"><h3>Combo #4</h3><p>Super Taco doble de pollo, papas fritas y refresco 600ml</p><div class="price">₡4.000</div><button class="add-to-cart" data-name="Combo #4" data-price="4000">Agregar al carrito</button></div>
@@ -140,7 +214,7 @@
         <button class="accordion-header">Tacos y Especialidades</button>
         <div class="accordion-content">
             <div class="menu-grid">
-                <div class="menu-card"><h3>Super Taco</h3><div class="price">₡1.500</div><button class="add-to-cart" data-name="Super Taco" data-price="1500">Agregar al carrito</button></div>
+                 <div class="menu-card"><h3>Super Taco</h3><div class="price">₡1.500</div><button class="add-to-cart" data-name="Super Taco" data-price="1500">Agregar al carrito</button></div>
                 <div class="menu-card"><h3>Super Taco con jamón y queso</h3><div class="price">₡2.000</div><button class="add-to-cart" data-name="Super Taco con jamón y queso" data-price="2000">Agregar al carrito</button></div>
                 <div class="menu-card"><h3>Super Taco doble</h3><div class="price">₡2.500</div><button class="add-to-cart" data-name="Super Taco doble" data-price="2500">Agregar al carrito</button></div>
                 <div class="menu-card"><h3>Super Taco doble + papas</h3><div class="price">₡3.500</div><button class="add-to-cart" data-name="Super Taco doble + papas" data-price="3500">Agregar al carrito</button></div>
@@ -148,7 +222,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <!-- ================= HORARIO ================= -->
@@ -168,13 +241,14 @@
     <p>📷 Instagram: <a href="https://www.instagram.com/taqueria.torres.guapiles/" target="_blank">@taqueria.torres.guapiles</a></p>
 </section>
 
-<!-- ================= CARRITO ================= -->
-<section id="carrito">
-    <h2>Carrito</h2>
+<!-- ================= CARRITO FLOTANTE ================= -->
+<button id="cart-button">🛒</button>
+<div id="cart-panel">
+    <h2>Tu Pedido</h2>
     <div id="cart-items"></div>
     <div id="cart-total"></div>
     <button id="checkout-btn">Finalizar Pedido</button>
-</section>
+</div>
 
 <footer>
     <p>&copy; 2026 Taquería Torres | Guápiles</p>
@@ -192,8 +266,15 @@ buttons.forEach(button => {
     });
 });
 
-// ===== CARRITO FUNCIONAL =====
+// ===== CARRITO FUNCIONAL FLOTANTE =====
 let cart = [];
+const cartButton = document.getElementById("cart-button");
+const cartPanel = document.getElementById("cart-panel");
+
+cartButton.addEventListener("click", () => {
+    cartPanel.classList.toggle("open");
+});
+
 function updateCart() {
     const cartItems = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
@@ -205,7 +286,6 @@ function updateCart() {
         div.textContent = `${item.name} - ₡${item.price.toLocaleString()}`;
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "❌";
-        removeBtn.style.marginLeft = "10px";
         removeBtn.onclick = () => {
             cart.splice(index, 1);
             updateCart();
@@ -250,3 +330,4 @@ hamburger.addEventListener('click', () => {
 
 </body>
 </html>
+
