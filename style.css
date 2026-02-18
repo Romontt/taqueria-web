@@ -11,73 +11,21 @@ body {
 header {
     background-color: #000000; /* fondo negro */
     padding: 2rem 2rem;
-    text-align: center; /* todo dentro del header centrado */
+    text-align: center; /* centra todo el contenido */
 }
 
 .header-container {
     display: flex;
     justify-content: center; /* centra horizontalmente */
     align-items: center;     /* centra verticalmente */
-    gap: 1.5rem;
-    flex-wrap: wrap; /* en móviles baja debajo del logo si falta espacio */
 }
 
 .logo {
-    width: 130px;
+    width: 250px; /* aumenta tamaño del logo */
     height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border-radius: 6px; /* opcional, bordes suaves */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5); /* sutil sombra para resaltar */
 }
-
-.header-text {
-    text-align: center; /* asegura que el texto quede centrado */
-}
-
-/* Texto en blanco */
-.taqueria,
-.torres,
-.fast-food {
-    color: #FFFFFF; /* todas las letras en blanco */
-}
-
-/* TAQUERÍA */
-.taqueria {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-/* TORRES — estilo retro decorativo parecido a Aviation Cocktail */
-.torres {
-    font-family: 'Pacifico', cursive;
-    font-size: 3rem;
-    color: #FFFFFF;
-    margin: 0.2rem 0;
-    position: relative;
-}
-
-/* FAST FOOD */
-.fast-food {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 0.3rem;
-
-    /* Banner con textura de madera */
-    background-image: url('img/madera.jpg');
-    background-size: cover;     /* cubre todo el banner */
-    background-position: center;
-    color: #FFFFFF;             /* letras blancas sobre madera */
-    padding: 0.3rem 1rem;
-    border-radius: 6px;
-    display: inline-block;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* sutil sombra para resaltar */
-}
-
 /* MENÚ */
 #menu {
     text-align: center;
