@@ -46,7 +46,7 @@ header {
 }
 
 /* ========================= */
-/* MENÚ ESTILO TARJETAS */
+/* MENÚ */
 /* ========================= */
 
 #menu {
@@ -56,41 +56,73 @@ header {
 #menu h2 {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     letter-spacing: 2px;
     color: #FFD700;
 }
 
-/* CATEGORÍAS */
-.categoria {
-    display: block;
-    text-align: center;
-    font-size: 26px;
+/* ========================= */
+/* ACORDEÓN */
+/* ========================= */
+
+.accordion-item {
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #5c3a21;
+}
+
+.accordion-header {
+    width: 100%;
+    background: linear-gradient(145deg, #3b2a1f, #2b1d15);
     color: #FFD700;
-    margin: 60px 0 30px 0;
-    position: relative;
+    padding: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.categoria::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #FFD700;
-    margin: 10px auto 0;
-    border-radius: 2px;
+.accordion-header:hover {
+    background: #3a2b1f;
 }
 
+.accordion-header::after {
+    content: "▼";
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: transparent;
+    padding: 0 20px;
+}
+
+/* ========================= */
 /* GRID */
+/* ========================= */
+
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    max-width: 1200px;
-    margin: auto;
+    padding: 30px 0;
 }
 
+/* ========================= */
 /* TARJETAS */
+/* ========================= */
+
 .menu-card {
     background: linear-gradient(145deg, #3b2a1f, #2b1d15);
     border: 1px solid #5c3a21;
@@ -200,4 +232,27 @@ footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+}
+
+/* ========================= */
+/* RESPONSIVE EXTRA */
+/* ========================= */
+
+@media (max-width: 768px) {
+    #menu h2 {
+        font-size: 28px;
+    }
+
+    .accordion-header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .menu-card {
+        padding: 20px;
+    }
+
+    .fotos img {
+        width: 90%;
+    }
 }
