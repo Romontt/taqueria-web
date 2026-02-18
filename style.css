@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(145deg, #3a2b1f 0%, #2b1f15 100%);
-    background-size: 100% 100%;
+    background-attachment: fixed;
     color: #FFFFFF;
 }
 
@@ -56,87 +56,94 @@ header {
 #menu h2 {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     letter-spacing: 2px;
     color: #FFD700;
 }
 
 /* ========================= */
-/* ACORDEÓN PREMIUM */
+/* ACORDEÓN PREMIUM PRO */
 /* ========================= */
 
 .accordion-item {
     max-width: 1200px;
-    margin: 25px auto;
-    border-radius: 14px;
+    margin: 30px auto;
+    border-radius: 18px;
     overflow: hidden;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(6px);
-    transition: 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background: rgba(15, 10, 6, 0.85);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 .accordion-item.active {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
-    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.35);
+    border-color: #FFD700;
 }
 
-/* Botón header */
+/* HEADER */
 
 .accordion-header {
     width: 100%;
-    background: linear-gradient(145deg, #2a1a12, #1f140e);
+    background: linear-gradient(145deg, #1a120c, #24160f);
     color: #FFD700;
-    padding: 20px 25px;
-    font-size: 22px;
-    font-weight: 600;
+    padding: 24px 30px;
+    font-size: 24px;
+    font-weight: 700;
     border: none;
     text-align: left;
     cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
     letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-/* Línea dorada lateral */
+/* Elimina fondo blanco por defecto */
+.accordion-header:focus,
+.accordion-header:active {
+    outline: none;
+}
+
+/* Hover elegante */
+.accordion-header:hover {
+    background: linear-gradient(145deg, #2f1d14, #1c120d);
+}
+
+/* Línea dorada más gruesa */
 .accordion-header::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width: 5px;
+    width: 7px;
     background: linear-gradient(to bottom, #FFD700, #b8860b);
 }
 
-/* Flecha */
+/* Flecha elegante */
 .accordion-header::after {
     content: "›";
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: bold;
     position: absolute;
-    right: 25px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
     transition: transform 0.3s ease;
 }
 
-/* Flecha cuando está abierto */
 .accordion-item.active .accordion-header::after {
     transform: translateY(-50%) rotate(-90deg);
 }
 
-/* Hover elegante */
-.accordion-header:hover {
-    background: linear-gradient(145deg, #3a2418, #24160f);
-}
-
-/* Contenido */
+/* CONTENIDO */
 
 .accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
-    padding: 0 25px;
+    padding: 0 30px;
+    background: rgba(0,0,0,0.25);
 }
 
 /* ========================= */
@@ -147,7 +154,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    padding: 35px 0;
+    padding: 40px 0;
 }
 
 /* ========================= */
@@ -158,15 +165,15 @@ header {
     background: linear-gradient(145deg, #3b2a1f, #2b1d15);
     border: 1px solid rgba(255, 215, 0, 0.15);
     padding: 25px;
-    border-radius: 14px;
+    border-radius: 16px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
 .menu-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: #FFD700;
-    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.35);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
 }
 
 .menu-card h3 {
@@ -177,7 +184,7 @@ header {
 .menu-card p {
     font-size: 14px;
     color: #ddd;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 8px 0;
 }
 
@@ -232,14 +239,16 @@ header {
     padding: 1rem 2.5rem;
     margin: 1rem 0;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     font-size: 1.1rem;
     transition: 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 .btn-whatsapp:hover {
     background-color: #1DA851;
+    transform: translateY(-3px);
 }
 
 /* ========================= */
@@ -247,7 +256,7 @@ header {
 /* ========================= */
 
 .mapa iframe {
-    border-radius: 10px;
+    border-radius: 12px;
     width: 100%;
     height: 300px;
     margin-top: 1rem;
@@ -277,7 +286,7 @@ footer {
 
     .accordion-header {
         font-size: 18px;
-        padding: 18px 20px;
+        padding: 20px;
     }
 
     .accordion-header::after {
