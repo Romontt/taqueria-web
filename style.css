@@ -59,20 +59,20 @@ header {
 }
 
 /* FAST FOOD */
-fast-food {
+.fast-food {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0.3rem;
 
-    /* Banner simulando madera con degradado */
-    background: linear-gradient(120deg, #5C3A21 0%, #7B4E2E 25%, #5C3A21 50%, #7B4E2E 75%, #5C3A21 100%);
-    color: #FFFFFF;
-    padding: 0.3rem 1rem;
-    border-radius: 6px;
-    display: inline-block;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    /* Cuadrito rústico estilo tablita */
+    background-color: #5C3A21;  /* marrón rústico */
+    color: #FFFFFF;             /* letras blancas */
+    padding: 0.25rem 0.8rem;    /* espacio dentro del banner */
+    border-radius: 4px;         /* bordes ligeramente redondeados */
+    display: inline-block;      /* solo ocupa el texto */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* sombra sutil para volumen */
 }
 
 /* MENÚ */
