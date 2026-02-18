@@ -199,6 +199,20 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
     message += `Total: ₡${cart.reduce((sum, i) => sum + i.price, 0).toLocaleString()}`;
     window.open(`https://wa.me/50688543437?text=${encodeURIComponent(message)}`, "_blank");
 });
+
+    // =========================
+// MENU HAMBURGUESA
+// =========================
+const hamburger = document.createElement('div');
+hamburger.classList.add('hamburger');
+hamburger.innerHTML = '<span></span><span></span><span></span>';
+
+document.querySelector('.nav-container').insertBefore(hamburger, document.querySelector('.nav-links'));
+
+hamburger.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('mobile-active');
+    hamburger.classList.toggle('active');
+});
 </script>
 
 </body>
