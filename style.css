@@ -65,6 +65,12 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0.3rem;
+
+    /* Estilo de tablita / banner */
+    background-color: #5C3A21; /* marrón madera */
+    padding: 0.3rem 1rem;      /* espacio dentro del banner */
+    border-radius: 6px;        /* bordes redondeados para estilo rústico */
+    display: inline-block;      /* para que solo abarque el texto */
 }
 /* MENÚ */
 #menu {
