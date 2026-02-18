@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-    width: 250px; /* aumenta tamaño del logo */
+    width: 200px; /* más pequeño para evitar pixelación */
     height: auto;
     border-radius: 6px; /* opcional, bordes suaves */
     box-shadow: 0 6px 15px rgba(0,0,0,0.5); /* sutil sombra para resaltar */
