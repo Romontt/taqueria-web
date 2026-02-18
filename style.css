@@ -9,76 +9,98 @@ body {
 
 /* HEADER */
 header {
-    background-color: #000000; /* fondo negro */
+    background-color: #000000;
     padding: 2rem 2rem;
-    text-align: center; /* centra todo el contenido */
+    text-align: center;
 }
 
 .header-container {
     display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;     /* centra verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Logo centrado y responsive */
 .logo {
-    width: 180px; /* tamaño óptimo para no pixelar */
-    max-width: 80%; /* en pantallas pequeñas se reduce automáticamente */
+    width: 180px;
+    max-width: 80%;
     height: auto;
-    border-radius: 6px; /* opcional, bordes suaves */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5); /* sutil sombra para resaltar */
-    transition: transform 0.3s ease; /* efecto suave si quieres hover */
+    border-radius: 6px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 }
 
-/* Efecto opcional al pasar el mouse */
 .logo:hover {
-    transform: scale(1.05); /* leve agrandado al hover */
+    transform: scale(1.05);
 }
 
-/* Responsive: si la pantalla es muy pequeña */
 @media (max-width: 480px) {
     .logo {
-        width: 140px; /* reduce en móviles */
+        width: 140px;
     }
 }
-/* MENÚ */
+
+/* ========================= */
+/* NUEVO MENÚ ESTILO TARJETAS */
+/* ========================= */
+
 #menu {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #111111; /* ligeramente más claro que el fondo general */
+    padding: 60px 20px;
 }
 
 #menu h2 {
-    font-size: 2rem;
-    color: #FFD700; /* amarillo del logo */
-    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    color: #FFD700;
 }
 
-#menu ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+/* GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-#menu li {
-    background-color: #1C1C1C;
-    border-radius: 8px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
-    font-size: 1.1rem;
-    width: 220px;
-    transition: 0.3s ease;
+/* TARJETAS */
+.menu-card {
+    background: linear-gradient(145deg, #3b2a1f, #2b1d15);
+    border: 1px solid #5c3a21;
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
-#menu li:hover {
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.6);
-    transform: translateY(-3px);
+.menu-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
 }
 
+.menu-card h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.menu-card p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+.price {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* ========================= */
 /* GALERÍA */
+/* ========================= */
+
 #galeria {
     text-align: center;
     padding: 2rem 1rem;
@@ -108,7 +130,10 @@ header {
     transform: scale(1.05);
 }
 
+/* ========================= */
 /* BOTÓN WHATSAPP */
+/* ========================= */
+
 .btn-whatsapp {
     display: inline-block;
     background-color: #25D366;
@@ -126,7 +151,10 @@ header {
     background-color: #1DA851;
 }
 
+/* ========================= */
 /* MAPA */
+/* ========================= */
+
 .mapa iframe {
     border-radius: 10px;
     width: 100%;
@@ -134,7 +162,10 @@ header {
     margin-top: 1rem;
 }
 
+/* ========================= */
 /* FOOTER */
+/* ========================= */
+
 footer {
     background-color: #111111;
     color: white;
