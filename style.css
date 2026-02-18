@@ -52,10 +52,11 @@ header {
 
 /* TORRES - estilo chalk / rústico */
 .torres {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Rouge Script', cursive; /* script decorativo más clásico */
     font-size: 3rem;
+    color: #FFFFFF; /* blanco para contraste con fondo negro */
     margin: 0.2rem 0;
-    position: relative;
+    letter-spacing: 1px;
 }
 
 /* FAST FOOD */
