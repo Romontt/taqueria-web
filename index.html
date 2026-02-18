@@ -126,6 +126,20 @@
     <p>&copy; 2026 Taquería Torres | Guápiles</p>
 </footer>
 
+// =========================
+// MENU HAMBURGUESA
+// =========================
+const hamburger = document.createElement('div');
+hamburger.classList.add('hamburger');
+hamburger.innerHTML = '<span></span><span></span><span></span>';
+
+document.querySelector('.nav-container').insertBefore(hamburger, document.querySelector('.nav-links'));
+
+hamburger.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('mobile-active');
+    hamburger.classList.toggle('active');
+});
+
 <script>
 const buttons = document.querySelectorAll(".accordion-header");
 
