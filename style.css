@@ -20,11 +20,26 @@ header {
     align-items: center;     /* centra verticalmente */
 }
 
+/* Logo centrado y responsive */
 .logo {
-    width: 200px; /* más pequeño para evitar pixelación */
+    width: 180px; /* tamaño óptimo para no pixelar */
+    max-width: 80%; /* en pantallas pequeñas se reduce automáticamente */
     height: auto;
     border-radius: 6px; /* opcional, bordes suaves */
     box-shadow: 0 6px 15px rgba(0,0,0,0.5); /* sutil sombra para resaltar */
+    transition: transform 0.3s ease; /* efecto suave si quieres hover */
+}
+
+/* Efecto opcional al pasar el mouse */
+.logo:hover {
+    transform: scale(1.05); /* leve agrandado al hover */
+}
+
+/* Responsive: si la pantalla es muy pequeña */
+@media (max-width: 480px) {
+    .logo {
+        width: 140px; /* reduce en móviles */
+    }
 }
 /* MENÚ */
 #menu {
