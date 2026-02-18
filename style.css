@@ -1,4 +1,7 @@
+/* ========================= */
 /* GENERAL */
+/* ========================= */
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -7,7 +10,10 @@ body {
     color: #FFFFFF;
 }
 
+/* ========================= */
 /* HEADER */
+/* ========================= */
+
 header {
     background-color: #000000;
     padding: 2rem 2rem;
@@ -40,7 +46,7 @@ header {
 }
 
 /* ========================= */
-/* NUEVO MENÚ ESTILO TARJETAS */
+/* MENÚ ESTILO TARJETAS */
 /* ========================= */
 
 #menu {
@@ -53,6 +59,26 @@ header {
     margin-bottom: 50px;
     letter-spacing: 2px;
     color: #FFD700;
+}
+
+/* CATEGORÍAS */
+.categoria {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    color: #FFD700;
+    margin: 60px 0 30px 0;
+    position: relative;
+}
+
+.categoria::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #FFD700;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 /* GRID */
@@ -76,22 +102,24 @@ header {
 
 .menu-card:hover {
     transform: translateY(-8px);
-    border-color: #d4af37;
+    border-color: #FFD700;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
 }
 
 .menu-card h3 {
     margin: 0 0 12px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .menu-card p {
     font-size: 14px;
     color: #ddd;
     line-height: 1.4;
+    margin: 8px 0;
 }
 
 .price {
-    margin-top: 18px;
+    margin-top: 15px;
     font-size: 20px;
     font-weight: bold;
     color: #FFD700;
@@ -173,4 +201,3 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
-
