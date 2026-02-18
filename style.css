@@ -67,7 +67,7 @@ header {
     margin-top: 0.3rem;
 
     /* Banner con textura de madera */
-    background-image: url('img/tabla.jpg');
+    background-image: url('img/madera.jpg');
     background-size: cover;     /* cubre todo el banner */
     background-position: center;
     color: #FFFFFF;             /* letras blancas sobre madera */
