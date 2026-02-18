@@ -1,86 +1,370 @@
 /* ========================= */
-/* MEJORA PROFESIONAL HORARIO */
+/* GENERAL */
 /* ========================= */
 
-#horario {
-    background: linear-gradient(145deg, #2a1a12, #1a120d);
-    padding: 100px 20px;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #3a2b1f 0%, #2b1f15 100%);
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    scroll-behavior: smooth;
 }
 
-.horario-box {
-    max-width: 750px;
-    margin: 40px auto 0 auto;
-    padding: 45px;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #3b2a1f, #2b1d15);
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
 }
 
-.horario-item {
-    margin: 25px 0;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #eee;
+.nav-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.horario-item span {
-    display: block;
-    font-size: 26px;
-    font-weight: bold;
+.nav-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
     color: #FFD700;
-    margin-top: 8px;
 }
 
-/* Línea decorativa */
-.horario-divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #FFD700, transparent);
-    margin: 25px 0;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #FFD700;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    background: linear-gradient(to right, #FFD700, #b8860b);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 18px rgba(255, 215, 0, 0.35);
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
 }
 
 /* ========================= */
-/* MEJORA PROFESIONAL CONTACTO */
+/* ESPACIADO ENTRE SECCIONES */
 /* ========================= */
 
+section {
+    padding: 80px 20px;
+}
+
+section:not(:last-of-type) {
+    margin-bottom: 60px;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+    background-color: #000000;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 140px;
+    }
+}
+
+/* ========================= */
+/* MENÚ HERO */
+/* ========================= */
+
+#menu {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.85)
+    ),
+    radial-gradient(circle at top left, #5a3b22 0%, transparent 40%),
+    radial-gradient(circle at bottom right, #3a2418 0%, transparent 40%),
+    linear-gradient(145deg, #1a1a1a, #2b1f15);
+}
+
+/* ========================= */
+/* ENCABEZADOS ESTILIZADOS */
+/* ========================= */
+
+section h2 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    letter-spacing: 3px;
+    color: #FFD700;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+section h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #FFD700;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    margin: 15px auto 0;
+    background: linear-gradient(to right, #FFD700, #b8860b);
+    border-radius: 5px;
+}
+
+/* ========================= */
+/* HORARIO Y CONTACTO */
+/* ========================= */
+
+#horario,
 #contacto {
-    padding: 100px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.35);
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
 }
 
-.contacto-box {
-    max-width: 750px;
-    margin: 40px auto 0 auto;
-    padding: 45px;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #3b2a1f, #2b1d15);
-    border: 1px solid rgba(255, 215, 0, 0.25);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-}
-
-.contacto-box p {
+#horario p,
+#contacto p {
     font-size: 18px;
-    margin: 18px 0;
+    margin: 10px 0;
     color: #ddd;
 }
 
-.contacto-box strong {
+/* ========================= */
+/* ACORDEÓN */
+/* ========================= */
+
+.accordion-item {
+    max-width: 1200px;
+    margin: 25px auto;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+.accordion-item.active {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+    border-color: rgba(255, 215, 0, 0.6);
+}
+
+.accordion-header {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: linear-gradient(145deg, #2a1a12, #1f140e);
+    color: #FFD700;
+    padding: 22px 25px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.accordion-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: linear-gradient(to bottom, #FFD700, #b8860b);
+}
+
+.accordion-header::after {
+    content: "›";
+    font-size: 28px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.accordion-header:hover {
+    background: linear-gradient(145deg, #3a2418, #24160f);
+    padding-left: 30px;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 25px;
+}
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+/* ========================= */
+/* TARJETAS */
+/* ========================= */
+
+.menu-card {
+    background: linear-gradient(145deg, #3b2a1f, #2b1d15);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    padding: 25px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    border-color: #FFD700;
+    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.35);
+}
+
+.menu-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.menu-card p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.price {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
     color: #FFD700;
 }
 
-.instagram-btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 35px;
-    background: linear-gradient(to right, #FFD700, #b8860b);
-    color: #000;
-    font-weight: 700;
-    border-radius: 35px;
-    text-decoration: none;
-    transition: 0.3s ease;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    background-color: #111111;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
 }
 
-.instagram-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    .accordion-header {
+        font-size: 18px;
+        padding: 18px 20px;
+    }
+
+    .menu-card {
+        padding: 20px;
+    }
 }
