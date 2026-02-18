@@ -66,13 +66,15 @@ header {
     letter-spacing: 1px;
     margin-top: 0.3rem;
 
-    /* Cuadrito rústico estilo tablita */
-    background-color: #5C3A21;  /* marrón rústico */
-    color: #FFFFFF;             /* letras blancas */
-    padding: 0.25rem 0.8rem;    /* espacio dentro del banner */
-    border-radius: 4px;         /* bordes ligeramente redondeados */
-    display: inline-block;      /* solo ocupa el texto */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* sombra sutil para volumen */
+    /* Banner con textura de madera */
+    background-image: url('img/tabla.jpg');
+    background-size: cover;     /* cubre todo el banner */
+    background-position: center;
+    color: #FFFFFF;             /* letras blancas sobre madera */
+    padding: 0.3rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* sutil sombra para resaltar */
 }
 
 /* MENÚ */
