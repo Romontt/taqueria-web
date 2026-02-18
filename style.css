@@ -1,219 +1,86 @@
 /* ========================= */
-/* GENERAL */
-/* ========================= */
-
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(145deg, #3a2b1f 0%, #2b1f15 100%);
-    color: #FFFFFF;
-}
-
-/* ========================= */
-/* NAVBAR */
-/* ========================= */
-
-nav {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(6px);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #FFD700;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ffffff;
-}
-
-/* ========================= */
-/* ESPACIADO ENTRE SECCIONES */
-/* ========================= */
-
-section {
-    padding: 100px 20px;
-}
-
-section:not(:last-of-type) {
-    margin-bottom: 60px;
-}
-
-/* ========================= */
-/* HEADER */
-/* ========================= */
-
-header {
-    background-color: #000000;
-    padding: 2rem;
-    text-align: center;
-}
-
-.logo {
-    width: 180px;
-    max-width: 80%;
-    border-radius: 6px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.05);
-}
-
-/* ========================= */
-/* ENCABEZADOS */
-/* ========================= */
-
-section h2 {
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: 46px;
-    letter-spacing: 3px;
-    color: #FFD700;
-    text-transform: uppercase;
-    position: relative;
-    margin-bottom: 60px;
-}
-
-section h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    margin: 15px auto 0;
-    background: linear-gradient(to right, #FFD700, #b8860b);
-    border-radius: 5px;
-}
-
-/* ========================= */
-/* MENÚ HERO */
-/* ========================= */
-
-#menu {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.75),
-        rgba(0, 0, 0, 0.85)
-    ),
-    radial-gradient(circle at top left, #5a3b22 0%, transparent 40%),
-    radial-gradient(circle at bottom right, #3a2418 0%, transparent 40%),
-    linear-gradient(145deg, #1a1a1a, #2b1f15);
-}
-
-/* ========================= */
-/* HORARIO PROFESIONAL */
+/* MEJORA PROFESIONAL HORARIO */
 /* ========================= */
 
 #horario {
-    background: linear-gradient(135deg, #1a1a1a, #2b1f15);
-    border-top: 2px solid #FFD700;
-    border-bottom: 2px solid #FFD700;
-    text-align: center;
+    background: linear-gradient(145deg, #2a1a12, #1a120d);
+    padding: 100px 20px;
 }
 
-.horario-container {
-    max-width: 800px;
-    margin: auto;
-    background: rgba(0,0,0,0.4);
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(255,215,0,0.2);
+.horario-box {
+    max-width: 750px;
+    margin: 40px auto 0 auto;
+    padding: 45px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #3b2a1f, #2b1d15);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
 .horario-item {
     margin: 25px 0;
     font-size: 20px;
+    letter-spacing: 1px;
+    color: #eee;
 }
 
 .horario-item span {
     display: block;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     color: #FFD700;
+    margin-top: 8px;
+}
+
+/* Línea decorativa */
+.horario-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #FFD700, transparent);
+    margin: 25px 0;
 }
 
 /* ========================= */
-/* CONTACTO */
+/* MEJORA PROFESIONAL CONTACTO */
 /* ========================= */
 
 #contacto {
-    text-align: center;
+    padding: 100px 20px;
 }
 
-.contacto-info {
-    max-width: 800px;
-    margin: auto;
+.contacto-box {
+    max-width: 750px;
+    margin: 40px auto 0 auto;
+    padding: 45px;
+    border-radius: 18px;
     background: linear-gradient(145deg, #3b2a1f, #2b1d15);
-    padding: 50px;
-    border-radius: 15px;
-    border: 1px solid rgba(255,215,0,0.3);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
-.contacto-info p {
+.contacto-box p {
     font-size: 18px;
-    margin: 15px 0;
+    margin: 18px 0;
+    color: #ddd;
 }
 
-.contacto-info strong {
+.contacto-box strong {
     color: #FFD700;
 }
 
 .instagram-btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: linear-gradient(45deg, #FFD700, #b8860b);
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: linear-gradient(to right, #FFD700, #b8860b);
     color: #000;
-    font-weight: bold;
-    border-radius: 30px;
+    font-weight: 700;
+    border-radius: 35px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
 }
 
 .instagram-btn:hover {
-    transform: scale(1.05);
-}
-
-/* ========================= */
-/* FOOTER */
-/* ========================= */
-
-footer {
-    background-color: #111111;
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-}
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-    section h2 {
-        font-size: 32px;
-    }
-
-    .horario-container,
-    .contacto-info {
-        padding: 30px;
-    }
-
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5);
 }
