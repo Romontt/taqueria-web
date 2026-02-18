@@ -382,6 +382,58 @@ section h2::after {
 }
 
 /* ========================= */
+/* CARRITO */
+/* ========================= */
+
+#carrito {
+    background: rgba(40, 40, 40, 0.95);
+    border-radius: 14px;
+    padding: 25px;
+    max-width: 400px;
+    margin: 40px auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+#cart-items div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(60,60,60,0.7);
+    border-radius: 8px;
+    color: #fff;
+}
+
+#cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #FFD700;
+    text-align: right;
+}
+
+#checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+    background: linear-gradient(to right, #FFD700, #b8860b);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+}
+
+/* ========================= */
 /* FOOTER */
 /* ========================= */
 
@@ -417,5 +469,15 @@ footer {
 
     .horario-container p {
         font-size: 18px;
+    }
+
+    #carrito {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    #checkout-btn {
+        font-size: 14px;
+        padding: 10px;
     }
 }
