@@ -12,12 +12,33 @@
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">Taquería Torres</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#horario">Horario</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="https://instagram.com/" target="_blank">Instagram</a></li>
+            <li><a href="#carrito">🛒</a></li>
+        </ul>
+
+        <a href="https://wa.me/506XXXXXXXX" class="nav-btn" target="_blank">
+            Pedir Ahora
+        </a>
+    </div>
+</nav>
+
 <header>
     <div class="header-container">
         <img src="img/logo.jpg" alt="Taquería Torres Logo" class="logo">
     </div>
 </header>
 
+<!-- ================= MENÚ ================= -->
 <section id="menu">
     <h2>Menú</h2>
 
@@ -82,6 +103,19 @@
 
 </section>
 
+<!-- ================= HORARIO ================= -->
+<section id="horario">
+    <h2>Horario</h2>
+    <p>Lunes a Domingo: 4:00 PM - 10:00 PM</p>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Guápiles, Costa Rica</p>
+    <p>Teléfono: 506-XXXX-XXXX</p>
+</section>
+
 <footer>
     <p>&copy; 2026 Taquería Torres | Guápiles</p>
 </footer>
@@ -89,24 +123,24 @@
 <script>
 const buttons = document.querySelectorAll(".accordion-header");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
 
-            const content = button.nextElementSibling;
+        const content = button.nextElementSibling;
 
-            document.querySelectorAll(".accordion-content").forEach(item => {
-                if (item !== content) {
-                    item.style.maxHeight = null;
-                }
-            });
-
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+        document.querySelectorAll(".accordion-content").forEach(item => {
+            if (item !== content) {
+                item.style.maxHeight = null;
             }
         });
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
     });
+});
 </script>
 
 </body>
