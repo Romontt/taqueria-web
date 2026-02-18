@@ -9,21 +9,21 @@ body {
 
 /* HEADER */
 header {
-    background-color: #000000; /* negro sólido */
-    padding: 1.5rem 2rem;
+    background-color: #000000; /* fondo negro sólido */
+    padding: 2rem 2rem;
 }
 
 .header-container {
     display: flex;
-    align-items: center; /* logo y texto alineados verticalmente */
-    gap: 1.5rem;         /* espacio entre logo y texto */
+    align-items: center;
+    gap: 2rem; /* espacio entre logo y texto */
 }
 
 .logo {
-    width: 120px;
+    width: 130px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 /* Texto a la par del logo */
@@ -33,42 +33,44 @@ header {
     justify-content: center;
 }
 
-/* Tipografía rústica y colores */
+/* Tipografía y estilo de "TAQUERÍA" */
 .taqueria {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: #FFFFFF;
+    font-size: 1.2rem;
     letter-spacing: 2px;
+    color: #FFD700; /* dorado del logo */
     margin: 0;
+    text-transform: uppercase;
 }
 
+/* Tipografía y estilo de "TORRES" (protagonista) */
 .torres {
-    font-family: 'Oswald', sans-serif; /* estilo rústico, robusto */
-    font-size: 3rem;
-    color: #FFD700; /* amarillo del logo para destacar */
-    margin: 0.2rem 0;
+    font-family: 'Pacifico', cursive; /* script retro / estilo handwritten */
+    font-size: 3.2rem;
+    color: #FFD700; /* dorado */
+    margin: 0.1rem 0;
     position: relative;
 }
 
-/* Acentos rojos a los lados de "TORRES" */
+/* Acentos opcionales: estrellas / guiones */
 .torres::before,
 .torres::after {
-    content: "—";
-    color: #E63946;
-    font-weight: bold;
-    font-size: 2rem;
-    margin: 0 0.5rem;
+    content: "★";
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin: 0 0.3rem;
 }
 
+/* Tipografía de "FAST FOOD" */
 .fast-food {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    background-color: #5C3A21; /* marrón madera */
-    padding: 0.2rem 1rem;
-    border-radius: 6px;
-    display: inline-block;
-    margin-top: 0.3rem;
     font-size: 1rem;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.3rem;
 }
 
 /* MENÚ */
