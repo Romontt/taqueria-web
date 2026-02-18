@@ -4,29 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taquería Torres | Guápiles</title>
-    <!-- Fuentes del logo -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Pacifico&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-   <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Oswald:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <!-- HEADER -->
-<header>
-    <div class="header-container">
-        <img src="img/logo.jpg" alt="Taquería Torres Logo" class="logo">
-    </div>
-</header>
+    <header>
+        <div class="header-container">
+            <img src="img/logo.jpg" alt="Taquería Torres Logo" class="logo">
+        </div>
+    </header>
 
     <!-- MENÚ -->
     <section id="menu">
         <h2>Menú</h2>
-        <ul>
-            <li>Taco al Pastor - ₡1,800</li>
-            <li>Taco de Carne Asada - ₡2,000</li>
-            <li>Taco de Pollo - ₡1,700</li>
-            <li>Combo 3 Tacos + Bebida - ₡5,000</li>
-        </ul>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <h3>Taco al Pastor</h3>
+                <p>Tortilla suave con carne al pastor, piña y salsa especial.</p>
+                <div class="price">₡1,800</div>
+            </div>
+
+            <div class="menu-card">
+                <h3>Taco de Carne Asada</h3>
+                <p>Carne asada a la parrilla con cebolla y cilantro fresco.</p>
+                <div class="price">₡2,000</div>
+            </div>
+
+            <div class="menu-card">
+                <h3>Taco de Pollo</h3>
+                <p>Pollo jugoso sazonado con especias tradicionales.</p>
+                <div class="price">₡1,700</div>
+            </div>
+
+            <div class="menu-card">
+                <h3>Combo 3 Tacos + Bebida</h3>
+                <p>Elige tus 3 tacos favoritos + refresco 600ml.</p>
+                <div class="price">₡5,000</div>
+            </div>
+
+        </div>
     </section>
 
     <!-- GALERÍA -->
@@ -44,10 +67,13 @@
         <h2>Contacto & Ubicación</h2>
         <p>Horario: Lun-Dom 11:00am - 9:00pm</p>
         <p>Dirección: Calle Principal, Guápiles, Costa Rica</p>
-        <a href="https://wa.me/506XXXXXXXX" target="_blank" class="btn-whatsapp">Pedir por WhatsApp</a>
+
+        <a href="https://wa.me/506XXXXXXXX" target="_blank" class="btn-whatsapp">
+            Pedir por WhatsApp
+        </a>
 
         <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
