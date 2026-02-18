@@ -194,22 +194,69 @@ section h2::after {
 }
 
 /* ========================= */
-/* HORARIO Y CONTACTO */
+/* HORARIO DESTACADO */
 /* ========================= */
 
-#horario,
+#horario {
+    background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.02));
+    border-radius: 14px;
+    padding: 50px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,215,0,0.2);
+}
+
+.horario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.horario-container p {
+    font-size: 20px;
+    margin: 0;
+    color: #fffacd;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 12px;
+    width: fit-content;
+    background: rgba(0,0,0,0.25);
+    box-shadow: 0 4px 15px rgba(255,215,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.horario-container p:hover {
+    background: rgba(255,215,0,0.1);
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* CONTACTO */
+/* ========================= */
+
 #contacto {
     text-align: center;
     background: rgba(0, 0, 0, 0.35);
     border-top: 1px solid rgba(255, 215, 0, 0.1);
     border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 14px;
+    padding: 40px 20px;
 }
 
-#horario p,
 #contacto p {
     font-size: 18px;
     margin: 10px 0;
     color: #ddd;
+}
+
+#contacto a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+#contacto a:hover {
+    color: #fffacd;
 }
 
 /* ========================= */
@@ -366,5 +413,9 @@ footer {
 
     .menu-card {
         padding: 20px;
+    }
+
+    .horario-container p {
+        font-size: 18px;
     }
 }
