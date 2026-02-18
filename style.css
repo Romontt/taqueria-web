@@ -62,50 +62,81 @@ header {
 }
 
 /* ========================= */
-/* ACORDEÓN */
+/* ACORDEÓN PREMIUM */
 /* ========================= */
 
 .accordion-item {
     max-width: 1200px;
-    margin: 20px auto;
-    border-radius: 10px;
+    margin: 25px auto;
+    border-radius: 14px;
     overflow: hidden;
-    border: 1px solid #5c3a21;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
 }
+
+.accordion-item.active {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+    border-color: rgba(255, 215, 0, 0.6);
+}
+
+/* Botón header */
 
 .accordion-header {
     width: 100%;
-    background: linear-gradient(145deg, #3b2a1f, #2b1d15);
+    background: linear-gradient(145deg, #2a1a12, #1f140e);
     color: #FFD700;
-    padding: 18px;
+    padding: 20px 25px;
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 600;
     border: none;
     text-align: left;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 1px;
 }
 
-.accordion-header:hover {
-    background: #3a2b1f;
+/* Línea dorada lateral */
+.accordion-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(to bottom, #FFD700, #b8860b);
 }
 
+/* Flecha */
 .accordion-header::after {
-    content: "▼";
-    float: right;
+    content: "›";
+    font-size: 28px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
     transition: transform 0.3s ease;
 }
 
+/* Flecha cuando está abierto */
 .accordion-item.active .accordion-header::after {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(-90deg);
 }
+
+/* Hover elegante */
+.accordion-header:hover {
+    background: linear-gradient(145deg, #3a2418, #24160f);
+}
+
+/* Contenido */
 
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
-    background: transparent;
-    padding: 0 20px;
+    transition: max-height 0.5s ease;
+    padding: 0 25px;
 }
 
 /* ========================= */
@@ -116,7 +147,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    padding: 30px 0;
+    padding: 35px 0;
 }
 
 /* ========================= */
@@ -125,9 +156,9 @@ header {
 
 .menu-card {
     background: linear-gradient(145deg, #3b2a1f, #2b1d15);
-    border: 1px solid #5c3a21;
+    border: 1px solid rgba(255, 215, 0, 0.15);
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 14px;
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
@@ -135,7 +166,7 @@ header {
 .menu-card:hover {
     transform: translateY(-8px);
     border-color: #FFD700;
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 12px 28px rgba(255, 215, 0, 0.35);
 }
 
 .menu-card h3 {
@@ -146,7 +177,7 @@ header {
 .menu-card p {
     font-size: 14px;
     color: #ddd;
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 8px 0;
 }
 
@@ -235,17 +266,22 @@ footer {
 }
 
 /* ========================= */
-/* RESPONSIVE EXTRA */
+/* RESPONSIVE */
 /* ========================= */
 
 @media (max-width: 768px) {
+
     #menu h2 {
         font-size: 28px;
     }
 
     .accordion-header {
         font-size: 18px;
-        padding: 15px;
+        padding: 18px 20px;
+    }
+
+    .accordion-header::after {
+        right: 20px;
     }
 
     .menu-card {
